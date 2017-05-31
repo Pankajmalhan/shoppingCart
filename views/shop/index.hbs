@@ -1,0 +1,34 @@
+{{# each products}}
+
+<div class = "row">   
+  {{# each this}}
+   <div class = "col-sm-6 col-md-4">
+      <div class = "thumbnail">
+          <a style=" text-decoration: none;" href="/itemdeatils/{{this._id}}">
+         <img src = "{{this.imagePath}}"
+        alt = "Generic placeholder thumbnail">
+          </a>
+         <div class = "caption">
+        <a style=" text-decoration: none;" href="/itemdeatils/{{this._id}}"><h3>{{this.title}}</h3></a>
+         <p class="description">
+             {{this.description}}
+         </p>
+         <div class="clearfix">
+        
+             <div class="price pull-left"><b>${{this.price}}</b></div>
+            <a class = "btn btn-primary pull-right" role = "button">
+               Add to Cart
+            </a>
+             </div>              
+             
+      </div>
+      </div>
+     
+   </div>
+  {{/each}}
+  
+         </div>
+{{/each}}
+
+
+
